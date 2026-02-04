@@ -17,12 +17,24 @@ public class TouristService {
         this.touristRepository = touristRepository;
     }
 
-    public List<TouristAttraction> getTouristRepository(){
+    public List<TouristAttraction> getTouristRepository() {
         return touristRepository.getTouristAttractions();
     }
 
-    public void removeByName(String name){
+    public void removeByName(String name) {
         touristRepository.removeByName(name);
+    }
+
+    public TouristAttraction getByName(String name) {
+        return touristRepository.getByName(name);
+    }
+
+    public TouristAttraction addAttraction(TouristAttraction attraction){
+        return touristRepository.add(attraction);
+    }
+
+    public boolean deleteByName(String name) {
+        return touristRepository.removeByName(name);
     }
 
 
