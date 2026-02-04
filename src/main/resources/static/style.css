@@ -6,24 +6,26 @@
 body {
     margin: 0;
     background-color: #f5f7fa;
-    color: #952323;
+    color: #000000;
 }
 
 header {
-    background-color: #be1e49;
-    color: #ddd7d7;
-    padding: 30px;
+    background-color: #750512;
+    color: #f6f1f1;
+    padding-top: 10px;
+    padding-bottom: 15px;
     text-align: center;
 }
 
 main {
+    color: white;
     max-width: 900px;
-    margin: 30px auto;
-    padding: 0 20px;
+    margin: 60px auto;
+    padding: 30px;
 }
 
 section {
-    background-color: white;
+    background-color: #e80707;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -32,7 +34,7 @@ section {
 
 h2 {
     margin-top: 0;
-    color: #e10f15;
+    color: #ffffff;
 }
 
 ul {
@@ -40,7 +42,7 @@ ul {
 }
 
 a {
-    color: #ffffff;
+    color: #b31b1b;
     text-decoration: none;
 }
 
@@ -49,8 +51,8 @@ a:hover {
 }
 
 footer {
-    background-color: #222;
-    color: white;
+    background-color: #750512;
+    color: #ffffff;
     text-align: center;
     padding: 15px;
     margin-top: 40px;

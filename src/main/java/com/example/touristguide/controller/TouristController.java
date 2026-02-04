@@ -53,23 +53,18 @@ public class TouristController {
         service.removeByName(attraction.getName());
         return new ResponseEntity<>("Removed", HttpStatus.OK);
     }
+  //  @GetMapping("/copenhill")
+   // public ResponseEntity<TouristAttraction> showCopenhill() {
 
-    @GetMapping("/tivoli")
-    public ResponseEntity<TouristAttraction> showTivoli() {
-
-        return new ResponseEntity<>(new TouristAttraction("tivoli", "forlystelsespark"), HttpStatus.OK);
-    }
-
-
-    @DeleteMapping("/{name}")
-    public ResponseEntity<String> deleteAttraction(@PathVariable String name) {
-        boolean deleted = service.deleteByName(name);
-
-        if (!deleted) {
+    //    return new ResponseEntity<>(new TouristAttraction("CopenHill", "forlystelsespark"), HttpStatus.OK);
+ //  }
+   @DeleteMapping("/delete/{name}")
+   public ResponseEntity<String> deleteAttraction(@PathVariable String name) {
+       boolean deleted = service.deleteByName(name);
+       if (!deleted) {
             return new ResponseEntity<>("Not found", HttpStatus.NOT_FOUND);
         }
 
         return new ResponseEntity<>("Deleted", HttpStatus.OK);
     }
 }
-

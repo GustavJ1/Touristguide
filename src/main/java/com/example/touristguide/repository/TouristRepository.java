@@ -16,9 +16,11 @@ public class TouristRepository {
     }
 
     public void addTouristAttraction() {
-        touristAttractions.add(new TouristAttraction("mona lisa", " et maleri"));
-        touristAttractions.add(new TouristAttraction("nilen", "en flod"));
-        touristAttractions.add(new TouristAttraction("den lille havfrue", " en statue"));
+        touristAttractions.add(new TouristAttraction("Havnebadet Islands Brygge", "Havnebadet Islands Brygge er et friluftsbad midt i København, der tiltrækker børnefamilier, motionssvømmere og strandløver fra hele byen."));
+        touristAttractions.add(new TouristAttraction("Kalvebod Fælled", "Vestamager byder i dag på store åbne vidder hvor sol, lys og fugtig salt jord er livsvigtigt for de dyr og planter, som lever på strandengen."));
+        touristAttractions.add(new TouristAttraction("CopenHill", "Københavns futuristiske skibakke på toppen af det nye forbrændingsanlæg på Amager"));
+        touristAttractions.add(new TouristAttraction("Amager Strandpark", "Københavns største, moderne strandanlæg med over 1 million årlige gæster. Området omfatter en 4,6 km lang hvid sandstrand og en kunstig ø med lagune"));
+
     }
 
 
