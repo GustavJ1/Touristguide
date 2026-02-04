@@ -1,11 +1,9 @@
 package com.example.touristguide.repository;
-
 import com.example.touristguide.model.TouristAttraction;
 import org.springframework.stereotype.Repository;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
+
 
 @Repository
 public class TouristRepository {
@@ -38,13 +36,13 @@ public class TouristRepository {
         return attraction;
     }
 
-// MR har lavet removeByName til Boolean så man får feedback efter den kører, men er ikke helt sikker på at det er korrekt sat op - evt. bare udskift boolean med void og fjern return statement.
 
-    public boolean removeByName(String name) {
+
+    public void removeByName(String name) {
         touristAttractions.removeIf(attraction ->
                 attraction.getName().equalsIgnoreCase(name)
         );
-        return true;
+
     }
 
 }

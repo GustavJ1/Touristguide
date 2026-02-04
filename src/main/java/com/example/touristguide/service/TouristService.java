@@ -1,6 +1,4 @@
 package com.example.touristguide.service;
-
-
 import org.springframework.stereotype.Service;
 import com.example.touristguide.model.TouristAttraction;
 import com.example.touristguide.repository.TouristRepository;
@@ -33,9 +31,7 @@ public class TouristService {
         return touristRepository.add(attraction);
     }
 
-    public boolean deleteByName(String name) {
-        return touristRepository.removeByName(name);
-    }
+
 
 
 }

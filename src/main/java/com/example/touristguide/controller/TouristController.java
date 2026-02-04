@@ -1,9 +1,6 @@
 package com.example.touristguide.controller;
-
-import com.example.touristguide.repository.TouristRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import com.example.touristguide.model.TouristAttraction;
 import com.example.touristguide.service.TouristService;
@@ -53,18 +50,5 @@ public class TouristController {
         service.removeByName(attraction.getName());
         return new ResponseEntity<>("Removed", HttpStatus.OK);
     }
-  //  @GetMapping("/copenhill")
-   // public ResponseEntity<TouristAttraction> showCopenhill() {
 
-    //    return new ResponseEntity<>(new TouristAttraction("CopenHill", "forlystelsespark"), HttpStatus.OK);
- //  }
-   @DeleteMapping("/delete/{name}")
-   public ResponseEntity<String> deleteAttraction(@PathVariable String name) {
-       boolean deleted = service.deleteByName(name);
-       if (!deleted) {
-            return new ResponseEntity<>("Not found", HttpStatus.NOT_FOUND);
-        }
-
-        return new ResponseEntity<>("Deleted", HttpStatus.OK);
-    }
 }
