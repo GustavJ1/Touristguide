@@ -1,9 +1,11 @@
 package com.example.touristguide.controller;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import com.example.touristguide.model.TouristAttraction;
 import com.example.touristguide.service.TouristService;
+import com.example.touristguide.model.TouristAttraction;
 
 import java.util.List;
 
@@ -21,9 +23,9 @@ public class TouristController {
     // GET LIST of Attractions
 
     @GetMapping()
-    public ResponseEntity<List<TouristAttraction>> getAttraction() {
-        List<TouristAttraction> touristAttractions = service.getTouristRepository();
-        return new ResponseEntity<>(touristAttractions, HttpStatus.OK);
+    public String getAttraction(Model model) {
+        model.addAttribute("attractions", service.getTouristRepository());
+        return "attractionlist";
     }
 
     // GET by name
