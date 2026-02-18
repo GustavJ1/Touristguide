@@ -46,9 +46,9 @@ public class TouristController {
     }
 
     @PostMapping("/remove")
-    public ResponseEntity<String> removeAttraction(@RequestBody TouristAttraction attraction) {
-        service.removeByName(attraction.getName());
-        return new ResponseEntity<>("Removed", HttpStatus.OK);
+    public ResponseEntity<String> removeAttraction(@PathVariable String name) {
+        service.removeByName(name);
+        return new ResponseEntity<>("Removed"+ name, HttpStatus.OK);
     }
 
 }
